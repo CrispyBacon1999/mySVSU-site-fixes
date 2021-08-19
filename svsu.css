@@ -1,0 +1,72 @@
+/* Header Buttons */
+[class*="AppBar__rChild"] button {
+    transition-property: background, border, box-shadow, transform;
+    transform: translate(0, 25px);
+}
+[class*="AppBar__rChild"] button:hover {
+    transform: translate(0, 25px) scale(1.1);
+    box-shadow: 0 0 8px #fff;
+    border-color: #fff;
+}
+
+.scrolled [class*="AppBar__rChild"] button {
+    transition-property: background, border, box-shadow, transform;
+    transform: translate(0, 0px);
+}
+
+.scrolled [class*="AppBar__rChild"] button:hover {
+    transform: translate(0, 0px) scale(1.1);
+}
+
+[class*="AppBar__rChild"] > * {
+    min-width: 38px;
+}
+
+[class*="AppBar__rChild"] > a > button {
+    width: 38px;
+    height: 38px;
+}
+
+[class*="AppBar__rChild"] > a {
+    margin-left: 6px;
+    margin-right: 6px;
+    margin-top: 6px;
+}
+
+[class*="AppBar__rChild"] > a:last-of-type {
+    margin-right: 24px;
+}
+
+@media (max-width: 768px) {
+    /* Do not move down when on smol screen */
+    [class*="AppBar__rChild"] button {
+        transition-property: background, border, box-shadow, transform;
+        transform: translate(0, 0px);
+    }
+    [class*="AppBar__rChild"] button:hover {
+        transform: translate(0, 0px) scale(1.1);
+        box-shadow: 0 0 8px #fff;
+        border-color: #fff;
+    }
+}
+
+@media (min-width: 1280px) {
+    [class*="AppBar__rChild"] > * {
+        min-width: 48px;
+    }
+
+    [class*="AppBar__rChild"] > a > button {
+        width: 48px;
+        height: 48px;
+    }
+
+    [class*="AppBar__rChild"] > a {
+        margin-left: 6px;
+        margin-right: 6px;
+        margin-top: 6px;
+    }
+
+    [class*="AppBar__rChild"] > a:last-of-type {
+        margin-right: 32px;
+    }
+}
